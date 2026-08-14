@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { Product } from '../entity/Product';
-import {AppDataSource} from "../index";
+import { AppDataSource } from '../data-source';
 
 const router = Router();
 

@@ -1,5 +1,7 @@
 # E-Commerce API
 
+[![CI](https://github.com/masaimahapa/e-commerce/actions/workflows/ci.yml/badge.svg)](https://github.com/masaimahapa/e-commerce/actions/workflows/ci.yml)
+
 This is a RESTful API for a simple e-commerce application built with Node.js, Express, TypeScript, and TypeORM.
 
 ## Features
@@ -28,7 +30,12 @@ This is a RESTful API for a simple e-commerce application built with Node.js, Ex
    npm install
    ```
 
-3. Start the application:
+3. Run the automated tests:
+   ```
+   npm test
+   ```
+
+4. Start the application:
    ```
    npm start
    ```
@@ -57,7 +64,7 @@ The server will start on `http://localhost:3000`.
 
 ## Testing
 
-Use a tool like Postman to test the API endpoints. Remember to include the JWT token in the Authorization header for protected routes.
+The automated suite covers cart behavior. Use a tool like Postman for endpoint-level exploration, including a JWT token in the `Authorization` header for protected routes.
 
 ## Note
 

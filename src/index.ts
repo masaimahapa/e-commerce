@@ -1,10 +1,6 @@
 import "reflect-metadata";
 import express from 'express';
-import { DataSource } from "typeorm";
-import { Product } from './entity/Product';
-import { User } from './entity/User';
-import { Order } from './entity/Order';
-import { OrderItem } from './entity/OrderItem';
+import { AppDataSource } from './data-source';
 import productRoutes from './routes/product';
 import userRoutes from './routes/user';
 import orderRoutes from './routes/order';
@@ -14,15 +10,6 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-
-export const AppDataSource = new DataSource({
-    type: "sqlite",
-    database: ":memory:",
-    dropSchema: true,
-    entities: [Product, User, Order, OrderItem],
-    synchronize: true,
-    logging: false
-});
 
 AppDataSource.initialize()
     .then(() => {
