@@ -69,3 +69,7 @@ The automated suite covers cart behavior. Use a tool like Postman for endpoint-l
 ## Note
 
 This application uses an in-memory SQLite database for demonstration purposes. Data will be reset when the server restarts.
+
+## License
+
+Licensed under the [MIT License](LICENSE).
